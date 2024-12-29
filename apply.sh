@@ -5,10 +5,18 @@ SOURCE_DIR="$1"
 DEST_DIR="$2"
 
 # Check if both directories are provided
-if [ -z "$SOURCE_DIR" ] || [ -z "$DEST_DIR" ]; then
-  echo "Usage: $0 <source_directory> <destination_directory>"
+if [ -z "$SOURCE_DIR" ] ; then
+  echo "Usage: $0 <source_directory> <destination_directory> (optional)"
   exit 1
 fi
+
+if [ -z "$DEST_DIR" ] ; then
+  echo "Destination directory not specified.  Will use default - '/opt/retropie/configs'"
+  DEST_DIR="/opt/retropie/configs"
+fi
+
+echo "Destination directory: ${DEST_DIR}"
+
 
 # Check if source directory exists
 if [ ! -d "$SOURCE_DIR" ]; then
