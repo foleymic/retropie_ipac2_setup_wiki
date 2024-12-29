@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LEDSpicer
+    version="1.0"
+    type="Profile"
+    backgroundColor="Black">
+    <startTransitions>
+        <animation name="BoardWipe" />
+    </startTransitions>
+    <alwaysOnElements>
+      <element name="P1_START" color="Gray" />
+      <element name="P1_CREDIT" color="Gray" />
+
+      <element name="P2_START" color="Gray" />
+      <element name="P2_CREDIT" color="Gray" />
+
+
+      <element name="P1_BUTTON1" color="Red" />
+      <element name="P1_BUTTON2" color="Red" />
+      <element name="P1_BUTTON3" color="Off" />
+      <element name="P1_BUTTON4" color="Off" />
+      <element name="P1_BUTTON5" color="Off" />
+      <element name="P1_BUTTON6" color="Off" />
+      <element name="P1_BUTTON7" color="Off" />
+
+      <element name="P2_BUTTON1" color="Red" />
+      <element name="P2_BUTTON2" color="Red" />
+      <element name="P2_BUTTON3" color="Off" />
+      <element name="P2_BUTTON4" color="Off" />
+      <element name="P2_BUTTON5" color="Off" />
+      <element name="P2_BUTTON6" color="Off" />
+      <element name="P2_BUTTON7" color="Off" />
+   </alwaysOnElements>
+</LEDSpicer>
