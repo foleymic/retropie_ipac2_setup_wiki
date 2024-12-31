@@ -60,10 +60,6 @@ find "$SOURCE_DIR" -type f | while read -r FILE; do
   echo "Copying $FILE to $DEST_FILE"
   cp "$FILE" "$DEST_FILE"
 
-  echo
-  echo "DEST_SUBDIR: ${DEST_SUBDIR}"
-
-  exit
 done
 
 echo "Files copied successfully!"
