@@ -37,7 +37,6 @@ find "$SOURCE_DIR" -type f | while read -r FILE; do
   RELATIVE_PATH="${FILE#$SOURCE_DIR/}"
   echo "RELATIVE_PATH: ${RELATIVE_PATH}"
 
-exit
 
   # Define the destination file path
   DEST_FILE="$DEST_DIR/$RELATIVE_PATH"
@@ -60,6 +59,11 @@ exit
   # Copy the file from source to destination
   echo "Copying $FILE to $DEST_FILE"
   cp "$FILE" "$DEST_FILE"
+
+  echo
+  echo "DEST_SUBDIR: ${DEST_SUBDIR}"
+
+  exit
 done
 
 echo "Files copied successfully!"
