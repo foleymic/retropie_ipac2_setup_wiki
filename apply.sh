@@ -6,8 +6,8 @@ DEST_DIR="$2"
 
 # Check if both directories are provided
 if [ -z "$SOURCE_DIR" ] ; then
-  echo "Usage: $0 <source_directory> <destination_directory> (optional)"
-  exit 1
+  echo "Source directory not specified.  Will use default - './files/retropie_controller_configurations/configs'"
+  SOURCE_DIR="./files/retropie_controller_configurations/configs"
 fi
 
 if [ -z "$DEST_DIR" ] ; then
@@ -15,6 +15,7 @@ if [ -z "$DEST_DIR" ] ; then
   DEST_DIR="/opt/retropie/configs"
 fi
 
+echo "Source directory: ${SOURCE_DIR}"
 echo "Destination directory: ${DEST_DIR}"
 
 
@@ -34,7 +35,10 @@ fi
 find "$SOURCE_DIR" -type f | while read -r FILE; do
   # Get the relative path of the file inside the source directory
   RELATIVE_PATH="${FILE#$SOURCE_DIR/}"
-  
+  echo "RELATIVE_PATH: ${RELATIVE_PATH}"
+
+exit
+
   # Define the destination file path
   DEST_FILE="$DEST_DIR/$RELATIVE_PATH"
 
