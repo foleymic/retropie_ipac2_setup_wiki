@@ -48,21 +48,22 @@ find "$SOURCE_DIR" -type f | while read -r FILE; do
     mkdir -p "$DEST_SUBDIR"
   fi
 
-  
+ 
   # Check if the destination file exists
   if [ -e "$DEST_FILE" ]; then
     # Backup the destination file
-    
-    BACKUP_SUBDIR="${$DEST_SUBDIR}/Backups"
+
+    BACKUP_SUBDIR="$DEST_SUBDIR/Backups"
     if [ ! -d "$BACKUP_SUBDIR" ]; then
         echo "Creating directory $BACKUP_SUBDIR"
         mkdir -p "$BACKUP_SUBDIR"
     fi
 
     DEST_FILE_NAME=$(basename "$DEST_FILE")
-    BACKUP_FILE="$BACKUP_SUBDIR/$DEST_FILE.bak"
-    
+    BACKUP_FILE="$BACKUP_SUBDIR/$DEST_FILE_NAME.bak"
+
     echo "Backing up $DEST_FILE to $BACKUP_FILE"
+
     mv "$DEST_FILE" "$BACKUP_FILE"
   fi
 
