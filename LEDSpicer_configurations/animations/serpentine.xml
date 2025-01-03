@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LEDSpicer
+    version="1.0"
+    type="Animation"
+>
+    <actor
+        type="Gradient"
+        group="All"
+        colors="Red,Green,Blue"
+        mode="Cyclic"
+        speed="Fast"
+        filter="Normal"
+        direction="Forward"
+    />
+    <actor
+        type="Serpentine"
+        group="All"
+        color="LightBlue"
+        speed="Fast"
+        filter="Combine"
+        direction="ForwardBouncing"
+        tailLength="3"
+        tailColor="Blue"
+        tailIntensity="75"
+        startTime="10"
+    />
+</LEDSpicer>
