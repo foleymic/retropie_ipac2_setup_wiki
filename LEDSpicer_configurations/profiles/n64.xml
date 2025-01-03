@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LEDSpicer
-    version="1.0"
-    type="Profile"
-    backgroundColor="Black">
+<LEDSpicer version="1.0" type="Profile" backgroundColor="Black">
     <startTransitions>
         <animation name="BoardWipe" />
     </startTransitions>
+    
     <alwaysOnElements>
       <element name="P1_START" color="Red" />
       <element name="P1_CREDIT" color="Gray" />
@@ -19,7 +17,7 @@
       <element name="P1_BUTTON7" color="Gray" />
 
       <element name="P2_START" color="Gray" />
-      <element name="P2_CREDIT" color="Gray" />
+      <element name="P2_CREDIT" color="Red" />
 
       <element name="P2_BUTTON1" color="Blue" />
       <element name="P2_BUTTON2" color="Yellow" />
