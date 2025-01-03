@@ -6,7 +6,7 @@
                 type="Serpentine"
                 group="All"
                 color="LightCyan"
-                speed="Slow"
+                speed="Fast"
                 filter="Combine"
                 direction="Forward"
                 tailLength="3"
