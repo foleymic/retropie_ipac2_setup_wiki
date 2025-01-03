@@ -6,7 +6,7 @@ DEST_DIR="$2"
 
 # Check if both directories are provided
 if [ -z "$SOURCE_DIR" ] ; then
-  echo "Source directory not specified.  Will use default - './files/retropie_controller_configurations/configs'"
+  echo "Source directory not specified.  Will use default - './retropie_controller_configurations/configs'"
   SOURCE_DIR="./files/retropie_controller_configurations/configs"
 fi
 
