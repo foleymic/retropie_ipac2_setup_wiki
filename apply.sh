@@ -73,4 +73,13 @@ find "$SOURCE_DIR" -type f | while read -r FILE; do
 
 done
 
+# Now Copy ledspicer xml's (animations, profiles, etc)
+sudo cp LEDSpicer_configurations /usr/share/ledspicer/
+
+# Next is es_systems.cfg
+sudo cp emulationstation_configurations/es_systems.cfg /opt/retropie/configs/all/emulationstation/
+
+# Finally, let's update runEmulatator.sh
+sudo cp scripts/runEmulator.sh /opt/retropie/supplementary/runcommand
+
 echo "Files copied successfully!"
